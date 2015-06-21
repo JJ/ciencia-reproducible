@@ -15,9 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
-
-
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -222,7 +221,26 @@ alt='licencias libres'>
 		    gente conozca tu trabajo y en su caso, colabore
 		espontáneamente.</aside>
 		</section>
-		
+
+		<section>
+		  <pre><code>#Ránking de investigadores en la UGR
+```{r setup, echo=FALSE}
+library(XML)
+library(ggplot2)
+theurl <- "http://investigacion.ugr.es/ugrinvestiga/static/BuscadorRanking/*/buscar?tipo=&rama_c=&disciplina_c=TELE_D&especialidad_c=&indicador=&periodo="
+tables <- readHTMLTable(theurl)
+my.table <- data.frame(Rank=c(1:length(tables$`NULL`$Citas)),Citas=as.numeric(as.character(tables$`NULL`$Citas)))
+```
+
+El [ránking de investigadores](http://investigacion.ugr.es/ugrinvestiga/static/BuscadorRanking/*/buscar?tipo=&rama_c=&disciplina_c=TELE_D&especialidad_c=&indicador=&periodo=) se elabora periódicamente por parte de [UGR investiga](http://investigacion.ugr.es/ugrinvestiga/) y está dividido por disciplinas.
+
+El próximo gráfico refleja el número de citas por investigador, ordenado de mayor a menor y con escala y logarítmica.
+```{r, echo=FALSE}
+ggplot(data=my.table,aes(x=Rank,y=Citas))+geom_point()+scale_y_log10()
+```
+		  </code></pre>
+		</section>
+
 	      </section> <!-- / Software libre y licencias -->
 
 	      <section
@@ -407,9 +425,16 @@ alt='Evolution of man'>
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+				  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				  { src: 'plugin/zoom-js/zoom.js', async: true },
+				  { src:'plugin/notes/notes.js',
+				    async: true },
+				  { src:'plugin/highlight/highlight.js', 
+				    async: true, 
+				    callback: function() {
+				      hljs.initHighlightingOnLoad(); 
+				    } 
+				  }
 				]
 			});
 

@@ -290,13 +290,13 @@ body {
   overflow: visible;
   z-index: 1;
   text-align: center;
-  -webkit-perspective: 600px;
-          perspective: 600px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
   -webkit-perspective-origin: 50% 40%;
           perspective-origin: 50% 40%; }
 
 .reveal .slides > section {
-  -ms-perspective: 600px; }
+  -ms-perspective: 800px; }
 
 .reveal .slides > section, .reveal .slides > section > section {
   display: none;
@@ -736,8 +736,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-perspective: 600px;
-          perspective: 600px; }
+  -webkit-perspective: 800px;
+          perspective: 800px; }
 
 .reveal .slide-background {
   display: none;
@@ -1026,7 +1026,7 @@ body {
   color: #fff; }
 
 .reveal .overlay.overlay-help .viewport .viewport-inner {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
   padding: 60px;
   text-align: center;
