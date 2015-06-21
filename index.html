@@ -445,16 +445,59 @@ Reveal.initialize({ pdf: true });
 			    </section>
 			  </section> <!-- /Sección sobre desarrollo basado en test -->
 
-			  <section data-background-transition="zoom">
-		<img src='img/keep-calm-and-integrati-on-2.png'
-		alt='keep calm and integration'>
-	
-		<aside class='notes'>La práctica de <a
-	      href='http://en.wikipedia.org/wiki/Continuous_integration'>integración
-		  continua proviene de la programación extrema</a>, y
-	      se trata de integrar los cambios que hayan pasado los
-		  tests en cuanto que o hayan hecho. </aside>
-	      </section>
+			  <section> <!-- Integración continua -->
+			    <section data-background-transition="zoom">
+			      <img src='img/keep-calm-and-integrati-on-2.png'
+				   alt='keep calm and integration'>
+			      
+			      <aside class='notes'>La práctica de <a
+				href='http://en.wikipedia.org/wiki/Continuous_integration'>integración
+				continua proviene de la metodología de programación extrema</a>, y
+				se trata de integrar los cambios que hayan pasado los
+				tests en cuanto que o hayan hecho. </aside>
+			    </section>
+
+			    	      <section data-background-transition="zoom">
+		<h2><code>travis.yml</code></h2>
+		<pre><code data-trim>language: node_js
+node_js:
+  - 0.10
+  - 0.11
+before_script:
+  - npm install -g grunt-cli</code></pre>
+
+		<h2>En Travis</h2>
+		<pre><code>npm test</code></pre>
+		
+		<aside class='notes'>Este es el escueto fichero que se
+		  usa para configurar la integración continua, en este
+		  caso en <a
+		  href='http://travis-ci.org'>Travis</a>, aunque es así
+		  porque usa valores por omisión: <code>npm test</code>, que a su vez
+		  llama a grunt con el valor test, que ya hemos mostrado
+		  previamente en la transpa: tests unitarios con qUnit. 
+		  Hay muchos
+		  sistemas de integración continua que se pueden usar
+		  online u offline. Jenkins, para el mundo Java, es una de
+		  las más populares y es también software libre (Travis no
+		  lo es, salvo algunas herramientas liberadas). Circle-CI,
+		  Shippable, decenas de herramientas pueden usarse
+		  para esto, cada cual con sus características, sus
+		  lenguajes soportados, su rapidez. </aside>
+				      </section>
+			  </section>
+
+			  <section
+			  data-background='https://farm6.staticflickr.com/5222/5681847561_170fbcef64_b_d.jpg'>
+			    <aside class='notes'>Puedes tener el
+			  pastel y también comértelo. Porque no sólo
+			  puedesp publicar el resultado, puedes
+			  publicar también resultados intermedios o
+			  simples gráficas, como he hecho yo
+			  anteriormente con el gráfico en ley de
+			      potencias de los investigadores en la
+			  UGR</aside>
+			  </section>
 			  
 
 			  <section data-background='http://www.crossref.org/crweblog/assets_c/2013/05/DOI-thumb-234x214-56.jpg'>
@@ -518,14 +561,17 @@ Reveal.initialize({ pdf: true });
 				    y tiene buena visibilidad.</aside>
 				</section>
 
-				<section data-background='https://farm1.staticflickr.com/134/318947873_12028f1b66_b_d.jpg'>
+				<section
+				data-background='https://farm1.staticflickr.com/134/318947873_12028f1b66_b_d.jpg'>
+
+				  <h3 class='bkg'>Fuentes de esta página en <a href='https://github.com/JJ/desarrollo-software-cientifico'><code>github.com/JJ/desarrollo-software-cientificos</code></a></h3>
 				  <aside class='notes'>¿Preguntas?
 				  (esto lo pongo porque si no no me
 				    aclaro de qué es)</aside>
 				</section>
 
 				<section>
-				  <h1>Créditos</h1>
+				  <h2>Créditos</h2>
 				  <ul>
 				    <li class='credits'><a
 				  href='https://www.flickr.com/photos/tripu/72803905/'>Moiré
@@ -557,14 +603,20 @@ Reveal.initialize({ pdf: true });
 
 				    <li class='credits'><a
 				  href='https://www.flickr.com/photos/evilerin/3078856253/'>Tirándose
-				      de los pelos por Emergency Brake</a></li>
+				      de los pelos por Emergency
+				  Brake</a></li>
+
+				    <li class='credits'><a
+				    href='https://www.flickr.com/photos/bensonkua/5681847561/'>Cupcake
+				      por Benson Kua</a></li>
+
 				    <li class='credits'><a href='https://www.flickr.com/photos/oberazzi/318947873/in/photolist-ubG6g-7UNt5H-5gffTM-7UNtBc-7URJ6j-7UNtrR-7URGoA-7URGvW-7UNy8v-7URGdJ-7UNsX4-7UNsCc-8ukLTP-kvxbRf-kvvy7e-76FXDz-zA6Sa-zA793-7A4hPU-4DfnE5-5FEiAQ-4LS5Vz-4QXBGH-7TF9Nk--7UNstn-7UNsNK-4J8e31-3pHNnz-6KDtm-6bTcrN-67maGa-aqzUnm-cEDVHh-5d6HqB-2vgyWN-ed3iVV-aqfPPZ-ed8XCw-5QyVB3-7Ao4L-4VwGmg-JAZQ1-bEGLEY-bTBvoi-7TF9Ng-6JTRPC-qkmj2-cEDVwN-cEDV2j'>Questions por Tim O'Brien</a></li>
 				    <li class='credits'><a href='https://www.flickr.com/photos/palash-biswas/14213007748/in/photolist-nDXo2J-nUpkBf-dS6wua-8o825k-ikaBAA-gGz2tD-gGyYeL-gGxYWY-nDXwC3-eCD4no-chmPBu-7Lk7jZ-6aoSEK-9ShRuQ-9ShTeG-dKb3nG-78ageC-gGyV1a-9ShDgb-e1mJEp-9ShyL9-kGbZXV-6HVt95-nC2Vh7-gGyUNg-eQ6Ckt-9DAGEv-nXPuAz-eQ6CPT-bqz6e3-eNER9b-jFV2KK-eQ6En8-9DDoTC-9DDjR3-bPB12a-9Crxz6-9CV2G2-niEiVM-btFJSj-5mzPqw-kVMCyp-9pVAT6-kKPiyZ-4Z7rph-8nXPBW-9SzFJF-5jSxEX-9qce8S-9s8JH1'>Gold
 				    and green by Palash
 				    Biswas</a></li>
 				    <li class='credits'>Capturas de pantalla el 24 de
 				      marzo en sus páginas correspondientes.</li>
-				    <li class='credits'>Fuentes de esta página en <a href='http://github.com/JJ/open-access/'><code>github.com/JJ/open-access</code></a></li>
+				   
 				  </ul>
 			</div>
 
