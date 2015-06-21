@@ -398,8 +398,7 @@ alt='Evolution of man'>
 			  
 			  <section> <!-- Sección sobre desarrollo basado en test -->
 			    <section
-			    data-background='https://farm4.staticflickr.com/3441/3190757194_c6d9704dc0_b_d.jpg'
-			    alt='check'>
+			      data-background='https://farm4.staticflickr.com/3441/3190757194_c6d9704dc0_b_d.jpg' alt='check'>
 			      <aside class='notes'>El desarrollo
 			    basado en test se integra perfectamente
 			    con un sistema de control de versiones y
@@ -422,16 +421,48 @@ alt='Evolution of man'>
 			    "servidor"</aside>
 			    </section>
 			    
+			    <section  data-background-transition="zoom">
+			      <pre><code data-trim>Reveal.addEventListener( 'ready', function() {
+	test( 'Reveal.isReady', function() {
+		strictEqual( Reveal.isReady(), true, 'returns true' );
+	});
+} );
+
+Reveal.initialize({ pdf: true });
+			      </code></pre>
+			      <aside class='notes'>Los test unitarios, como en este
+				caso, revelan los posibles errores en la funcionalidad
+				que uno quiere que tenga. En este caso, la
+				funcionalidad de generar un PDF a partir de esta
+				presentación (que incluya estas notas,
+			      imagino). Habría que observar que en
+			      este caso estamos testeando una
+			      presentación. Se puede testear
+			      absolutamente todo, hasta los
+			      trabajos. Es cuestión de pensar qué hace
+			      a un trabajo escrito válido; por
+			      ejemplo, la ortografía.</aside>
+			    </section>
 			  </section> <!-- /Sección sobre desarrollo basado en test -->
 
+			  <section data-background-transition="zoom">
+		<img src='img/keep-calm-and-integrati-on-2.png'
+		alt='keep calm and integration'>
+	
+		<aside class='notes'>La práctica de <a
+	      href='http://en.wikipedia.org/wiki/Continuous_integration'>integración
+		  continua proviene de la programación extrema</a>, y
+	      se trata de integrar los cambios que hayan pasado los
+		  tests en cuanto que o hayan hecho. </aside>
+	      </section>
+			  
 
-
-				<section data-background='http://www.crossref.org/crweblog/assets_c/2013/05/DOI-thumb-234x214-56.jpg'>
-				  <aside class="notes">
-				    El concepto de DOI es fundamental, porque asigna un identificador único a un "objeto de investigación". Pero puede ser tanto un trabajo completo como una imagen, un programa o datos.
-				  </aside>
-				</section>
-
+			  <section data-background='http://www.crossref.org/crweblog/assets_c/2013/05/DOI-thumb-234x214-56.jpg'>
+			    <aside class="notes">
+			      El concepto de DOI es fundamental, porque asigna un identificador único a un "objeto de investigación". Pero puede ser tanto un trabajo completo como una imagen, un programa o datos.
+			    </aside>
+			  </section>
+			  
 				<section data-background='https://farm4.staticflickr.com/3915/14213007748_01f42b2e64_h_d.jpg'>
 				  <aside class='notes'>
 				    Otro de los conceptos es el de
