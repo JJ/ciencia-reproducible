@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Desarrollo de software científico colaborativo</title>
+		<title>Ciencia reproducible usando software libre</title>
 
 		<meta name="description" content="Cómo desarrollar y dónde publicar tus artículos para que todo el mundo los pueda leer">
 		<meta name="author" content="JJ merelo">
@@ -48,126 +48,7 @@ src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
 	    
 	    <!-- Any section element inside of this container is displayed as a slide -->
 	    <div class="slides">
-	      
-	      <!-- Primer bloque -->
-	      <section>
-		<section>
-		  <h1>¿Qué hacemos?</h1>
-		  
-		</section>
-		
-		<section>
-		  <h1>Programar</h1>
-		</section>
-		
-		<section>
-		  <h1>Ejecutarlos</h1>
-		</section>
-		
-		<section>
-		  <h1>Escribir el <em>paper</em></h1>
-		</section>
-	      </section>
-	      
-	      <!-- Segundo bloque -->
-	      <section>
-		<section>
-		  <h1>¿Cómo lo hacemos?</h1>
-		</section>
-		
-		<section>
-		  <h1>El lenguaje de siempre</h1>
-		  
-		  <aside class='notes'>O algo que no llega
-		    ni a lenguaje, como el Matlab. Java,
-		    C++ si acaso. Same old. "Son más
-		    rápidos". ¿Qué más da que dure unos
-		    segundos o unas decenas de segundos?</notes>
-		</section>
-		
-		<section>
-		  <h1>Ejecución == prueba</h1>
-		  
-		  <aside class='notes'>Si funciona, ¿para
-		    qué voy a probar? Para eso están los
-		    depuradores.</note>
-		    
-		</section>
-		
-		<section
-		  data-background='https://farm3.staticflickr.com/2148/2034052665_424cf0783e_b_d.jpg'
-title='not'>
-		  <h1 class='bkg'>Instrucciones de instalación ni
-		    ejecución</h1>
-		  
-		  <aside class='notes'>El único ejemplar
-		    de tu código es el que está funcionando</notes>
-		</section>
-		
-		<section
-		  data-background='https://farm3.staticflickr.com/2148/2034052665_424cf0783e_b_d.jpg'
-			      title='not'>
-		  <h1 class='bkg'>Pruebas formales ni requisitos</h1>
-		</section>
-		
-		<section
-		  data-background='https://farm3.staticflickr.com/2148/2034052665_424cf0783e_b_d.jpg'
-title='not'>
-		  <h1 class='bkg'>Organización-seguimiento de tareas</h1>
-		</section>
-		
-		<section 
-		  data-background='https://farm3.staticflickr.com/2148/2034052665_424cf0783e_b_d.jpg'
-title='not'>
-		  <h2 class='bkg'>Relación
-		    experimentos ⇒ datos ⇒ gráficas ⇒ trabajo</h2>
-		</section>
-		
-	      </section>
-	      
-	      <section
-		data-background='https://farm4.staticflickr.com/3042/3078856253_da417f6b98_o_d.jpg'
-alt='tirándose de los pelos'>
-		<aside class='notes'>Lo que lleva a muchas
-		  situaciones en las que uno se tira de los
-		  pelos. La más simple de las cuales es que
-		  solicitada revisión de un trabajo no tienes
-		  ni idea de qué código fue el que lo
-		  produjo y eres incapaz de reproducir el resultado.</aside>
-	      </section>
-	      
-	      
-	      
-	      <section>
-		<h1>Somos lo peor</h1>
-		
-		<aside class='notes'>Los
-		  científicos somos lo peor
-		  programando. Hay un monocultivo de una
-		  serie de lenguajes de programación (y
-		  cosas que no lo son, como Matlab) y
-		  las prácticas son de desarrollo
-		  individual, sin seguir ningún tipo de
-		  convenciones ni buenas prácticas, sin
-		  ninguna metodología de programación,
-		  lo que causa todo tipo de problemas.</aside>
-	      </section>
-	      
-	      <section
-		data-background='https://farm1.staticflickr.com/20/72803905_4a40e1ca30_o_d.jpg'
-alt='patrones de moiré por Tripu'>
-		<aside class='notes'>El concepto de
-		  reproducibilidad es fundamental para
-		  la ciencia. Si no hay
-		  reproducibilidad, ni siquiera sabes si
-		  hay algo de ciencia: nadie puede
-		  replicar tus resultados. Y la
-		  experiencia nos dice que a veces, ni
-		  nosotros mismos podemos reproducir los
-		  resultados obtenidos. Lo que lleva a
-		  dos, o tres, cuestiones.</aside>
-	      </section>
-			  
+	      		  
 	      <section> <!-- Software libre y licencias -->
 		<section
 		  data-background='https://farm5.staticflickr.com/4060/4347002765_ec2e972900_b_d.jpg'
@@ -261,237 +142,34 @@ ggplot(data=my.table,aes(x=Rank,y=Citas))+geom_point()+scale_y_log10()
 
 	      </section> <!-- / Software libre y licencias -->
 
-	      <section
-		  data-background='https://farm6.staticflickr.com/5552/14781302372_6a8eb9630a_z_d.jpg'
-alt='Evolution of man'>
-			    <aside class='notes'>Y es
-			      imprescindible trabajar con un
-			      sistema de control de versiones,
-			      porque permite varias cosas:
-			      revisión entre pares, colaboración
-			      espontánea, organización del
-			      trabajo, <em>checkpointing</em></aside>
-			  </section>
-
-			  <section> 			    <!-- Sección sobre git -->
-
-			    <section
-			      data-background='https://farm8.staticflickr.com/7313/12387858244_8bf50aa652_z_d.jpg' alt='git'>
-			      <aside class='notes'>Hoy en día es el
-				sistema de gestión de fuentes por
-				excelencia. Hace tiempo había varios
-				contendientes, cvs, subversion, bazaar,
-				Mercurial... todos han sucumbido ante el
-				poder y la flexibilidad de git. Git es la
-				base de flujos de trabajo en toda la
-				industria del software, incluyendo
-				despliegue de aplicaciones. Alrededor de
-				él, hay todo un ecosistema de herramientas
-				y plataformas
-				que permiten hacer desde revisiones de
-				código hasta comprobar la
-				ortografía. Antes que aprender cualquier
-				otro lenguaje o paquete de Matlab, hoy en
-				día git es imprescindible en la ciencia,
-				desarrolles o no software.</aside>
-			    </section>
-
-
-			    <section>
-			      <h1><code><a
-			      href='http://github.com'>github.com</a></code></h1>
-			      <aside class='notes'>Se empieza por
-			      abrir una cuenta en GitHub. También
-			      puede ser Bitbucket, mucho menos popular
-			      pero permite tener repositorios
-			      privados. Cosa que no aconsejo. La
-			      ciencia tiene que ser abierta desde la
-				primera línea de código. En git se
-				trabaja con <em>repositorios</em> o
-			    <em>repos</em>, básicamente proyectos
-			    autocontenidos. Un repo se crea desde el
-			    interfaz y te da la posibilidad de crear
-			    un fichero con la licencia, un
-			    <code>.gitignore</code> y un <code>README.md</code> </aside>
-			    </section>
-
-			    <section>
-			      <code  class='fragment fade-out'>git clone
-			      git@github.com:JJ/desarrollo-software-cientifico.git</code>
-
-			      <h2 class='fragment
-			      current-visible'>(Edito)</h2>
-			      <pre class='fragment current-visible'><code>git commit -am "Cambia cosas"</code></pre>
-			      <pre class='fragment current-visible'><code>git push</code></pre>
-
-			      <aside class='notes'>Para instalarlo en
-			      linux se hace con sudo apt-get install
-			      git (git-core en versiones más
-			      antiguas). En Windows, se borra Windows,
-			      se instala Linux y se procede a ejecutar la
-				misma órden.</aside>
-
-			    </section>
-
-			    <section>
-			      <code class='fragment fade-out'>git pull</code>
-
-			      <h2 class='fragment
-			      current-visible'>(Edito)</h2>
-
-	      <pre  class='fragment current-visible'><code>git commit -am "Cambia más cosas"</code></pre>
-	      <pre  class='fragment current-visible'><code>git push</code></pre>
-
-			      <aside class='notes'>Todo esto se puede
-			    hacer en un interfaz gráfico, sobre todo
-			    en Macintosh y Windows. No lo aconsejo,
-			    porque es muy limitado y cuando hay algún
-			    problema habrá que ir a la línea de
-			    órdenes de todas formas. También se puede
-			    hacer directamente desde el editor o marco
-				de aplicaciones. </aside>
-			    </section>
-
-			    <section>
-			      <h1>Arreglo de posibles conflictos</h1>
-
-			      <aside class='notes'>Los conflictos se
-			    arreglan editando el bloque de código con
-			    el que se haya producido el problema y
-			    fusionando las dos versiones, aunque
-			    también, desde línea de órdenes, se puede
-				aceptar una u otra versión (propia o ajena)</aside>
-			    </section>
-
-			    <section>
-			      <h1>Organización trabajo en GitHub</h1>
-
-			      <h2 class='fragment current-visible'>Hitos e
-			      <em>issues</em></h2>
-			    </section>
-
-			      
-
-			  </section> 			    <!-- /Sección sobre git -->
-
-			  <section>
-			    <section><h1>¿Y dónde ejecutas tu programa?</h1></section>
-
-			    <section data-background='https://farm1.staticflickr.com/512/19022588615_2fb585af7c_b_d.jpg' alt='las nubes; foto mía'>
-			      <aside class='notes'>Por poco dinero, o
-			      ninguno de forma temporal, se pueden
-			      usar infraestructuras como servicio
-			      (básicamente ordenadores virtuales,
-			      escalables y bajo demanda) o plataformas
-			      como servicio que pueden alujar
-			      servicios y en donde se pueden desplegar
-			      con la especificación y el software
-			      instalado que uno quiera. El despliegue,
-			      normalmente, se hace con git, por eso es
-			      imprescindible conocerlo. Es posible que
-			      algún día todo se haga en la nube; es
-			      más económico que trabajar con un
-			      ordenador de sobremesa siempre que los
-				requisitos computacionales no sean excesivos.</aside>
-			    </section>
-			  </section>
-			  
-			  <section> <!-- Sección sobre desarrollo basado en test -->
-			    <section
-			      data-background='https://farm4.staticflickr.com/3441/3190757194_c6d9704dc0_b_d.jpg' alt='check'>
-			      <aside class='notes'>El desarrollo
-			    basado en test se integra perfectamente
-			    con un sistema de control de versiones y
-			    se trata de considerar las pruebas de
-			    calidad, test unitarios y de integración,
-			    como parte integral e incluso básica del
-			    proyecto de programación. Primero, se
-			    trata de hacer un desarrollo modular,
-			    donde las funciones se agrupen en
-			    bibliotecas o clases. Cada una de esas
-			    clases se testeará por separado usando
-			    marcos de prueba como los que tienen todos
-			    los lenguajes, generalmente llamados
-			    *unit: JUnit, PyUnit, PHPUnit (no es que a
-			    nadie se le vaya a ocurrir programar en ciencia
-			    PHP, pero a saber). La práctica habitual
-			    es pasar los tests cada vez que se hace un
-			    commit nuevo, y git permite automatizarlo,
-				en el cliente o en el
-			    "servidor"</aside>
-			    </section>
-			    
-			    <section  data-background-transition="zoom">
-			      <pre><code data-trim>Reveal.addEventListener( 'ready', function() {
-	test( 'Reveal.isReady', function() {
-		strictEqual( Reveal.isReady(), true, 'returns true' );
-	});
-} );
-
-Reveal.initialize({ pdf: true });
-			      </code></pre>
-			      <aside class='notes'>Los test unitarios, como en este
-				caso, revelan los posibles errores en la funcionalidad
-				que uno quiere que tenga. En este caso, la
-				funcionalidad de generar un PDF a partir de esta
-				presentación (que incluya estas notas,
-			      imagino). Habría que observar que en
-			      este caso estamos testeando una
-			      presentación. Se puede testear
-			      absolutamente todo, hasta los
-			      trabajos. Es cuestión de pensar qué hace
-			      a un trabajo escrito válido; por
-			      ejemplo, la ortografía.</aside>
-			    </section>
-			  </section> <!-- /Sección sobre desarrollo basado en test -->
-
-			  <section> <!-- Integración continua -->
-			    <section data-background-transition="zoom">
-			      <img src='img/keep-calm-and-integrati-on-2.png'
-				   alt='keep calm and integration'>
-			      
-			      <aside class='notes'>La práctica de <a
-				href='http://en.wikipedia.org/wiki/Continuous_integration'>integración
-				continua proviene de la metodología de programación extrema</a>, y
-				se trata de integrar los cambios que hayan pasado los
-				tests en cuanto que o hayan hecho. </aside>
-			    </section>
-
-			    	      <section data-background-transition="zoom">
-		<h2><code>travis.yml</code></h2>
-		<pre><code data-trim>language: node_js
-node_js:
-  - 0.10
-  - 0.11
-before_script:
-  - npm install -g grunt-cli</code></pre>
-
-		<h2>En Travis</h2>
-		<pre><code>npm test</code></pre>
+	      <section>
+		<section><h1>¿Y dónde ejecutas tu programa?</h1></section>
 		
-		<aside class='notes'>Este es el escueto fichero que se
-		  usa para configurar la integración continua, en este
-		  caso en <a
-		  href='http://travis-ci.org'>Travis</a>, aunque es así
-		  porque usa valores por omisión: <code>npm test</code>, que a su vez
-		  llama a grunt con el valor test, que ya hemos mostrado
-		  previamente en la transpa: tests unitarios con qUnit. 
-		  Hay muchos
-		  sistemas de integración continua que se pueden usar
-		  online u offline. Jenkins, para el mundo Java, es una de
-		  las más populares y es también software libre (Travis no
-		  lo es, salvo algunas herramientas liberadas). Circle-CI,
-		  Shippable, decenas de herramientas pueden usarse
-		  para esto, cada cual con sus características, sus
-		  lenguajes soportados, su rapidez. </aside>
-				      </section>
-			  </section>
+		<section data-background='https://farm1.staticflickr.com/512/19022588615_2fb585af7c_b_d.jpg' alt='las nubes; foto mía'>
+		  <aside class='notes'>Por poco dinero, o
+		    ninguno de forma temporal, se pueden
+		    usar infraestructuras como servicio
+		    (básicamente ordenadores virtuales,
+		    escalables y bajo demanda) o plataformas
+		    como servicio que pueden alujar
+		    servicios y en donde se pueden desplegar
+		    con la especificación y el software
+		    instalado que uno quiera. El despliegue,
+		    normalmente, se hace con git, por eso es
+		    imprescindible conocerlo. Es posible que
+		    algún día todo se haga en la nube; es
+		    más económico que trabajar con un
+		    ordenador de sobremesa siempre que los
+		    requisitos computacionales no sean excesivos.</aside>
+		</section>
+	      </section>
+	      
 
 			  <section
 			  data-background='https://farm6.staticflickr.com/5222/5681847561_170fbcef64_b_d.jpg'>
 			    <aside class='notes'>Puedes tener el
 			  pastel y también comértelo. Porque no sólo
-			  puedesp publicar el resultado, puedes
+			  puedes publicar el resultado, puedes
 			  publicar también resultados intermedios o
 			  simples gráficas, como he hecho yo
 			  anteriormente con el gráfico en ley de
@@ -506,7 +184,7 @@ before_script:
 			    </aside>
 			  </section>
 			  
-				<section data-background='https://farm4.staticflickr.com/3915/14213007748_01f42b2e64_h_d.jpg'>
+			  <section data-background='https://farm4.staticflickr.com/3915/14213007748_01f42b2e64_h_d.jpg'>
 				  <aside class='notes'>
 				    Otro de los conceptos es el de
 				    reutilización del material ya
@@ -573,24 +251,6 @@ before_script:
 				<section>
 				  <h2>Créditos</h2>
 				  <ul>
-				    <li class='credits'><a
-				  href='https://www.flickr.com/photos/tripu/72803905/'>Moiré
-				      de Tripu</a></li>
-				    <li class='credits'><a
-				  href='https://www.flickr.com/photos/8042373@N03/2034052665/'>Admiración
-				      de mpov</a></li>
-
-				    <li class='credits'><a
-				  href='https://www.flickr.com/photos/armydre2008/4347002765/'>Pingüino
-				      de Frankleleon</a></li>
-
-				    <li class='credits'><a
-				    href='https://www.flickr.com/photos/internetarchivebookimages/14781302372/'>Embriones
-				      de Internet Archive</a></li>
-
-				    <li class='credits'><a
-				    href='https://www.flickr.com/photos/116924306@N08/12387858244/'>Git
-				    de grafficintrades</a></li>
 
 				    <li class='credits'><a
 				      href='https://www.flickr.com/photos/wallyg/6271344320/'>Puertas
@@ -600,11 +260,6 @@ before_script:
 				    <li class='credits'><a
 				    href='https://www.flickr.com/photos/cayusa/3190757194/in/photolist-5RXsX5-azWHNq-9yFdM9-9RGESz-9S5aGU-9Sg7Ep-9xssPv-9E99hf-7puEwU-9wyzqH-9ggVyz-9Fc6oF-9ihTmF-5Hkdpw-9tXaXG-9jg4pZ-9y2Lnf-9kBd77-9GG1PX-8LPYp8-8JjYZ6-9jcokU-9vEs9T-9Jehdh-9FLb9D-9Gq43x-71SEoD-9ybH5H-8c3giZ-9sxDzV-9Q4fha-9wQFaE-9uZYxB-9DTaFx-9bRbBx-9o4nq7-7jHTk2-9PySP5-bDVVbC-7Qc2f3-9NjesU-9qwDp9-9CMMnm-9jDnj4-9sTRKL-9no9Ez-9RtAbE-9R771G-aVznH2-9P5i28'>Check
 				      por Bart</a></li>
-
-				    <li class='credits'><a
-				  href='https://www.flickr.com/photos/evilerin/3078856253/'>Tirándose
-				      de los pelos por Emergency
-				  Brake</a></li>
 
 				    <li class='credits'><a
 				    href='https://www.flickr.com/photos/bensonkua/5681847561/'>Cupcake
