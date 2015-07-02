@@ -20,6 +20,6 @@ elecciones.data$urna = paste(elecciones.data$Sector, elecciones.data$Centro )
 El siguiente es el porcentaje de voto, ordenado por urna (es decir, centro y colectivo)
 
 ```{r, echo=FALSE}
-ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_point()
+ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_bar(stat='identity')
 ```
 
