@@ -84,7 +84,8 @@ alt='licencias libres'>
 		    cualquier obra derivada con la misma
 		    licencia. La equivalente en CC es la que
 		    se indica, <a
-		  href='https://creativecommons.org/licenses/by-sa/3.0/es/'>cc-by-sa</a></aside>
+		  href='https://creativecommons.org/licenses/by-sa/3.0/es/'>cc-by-sa</a>. Evidentemente,
+		  estas transpas tienen una licencia libre.</aside>
 			  
 		</section> 
 
@@ -103,23 +104,31 @@ alt='licencias libres'>
 		espontáneamente.</aside>
 		</section>
 
+		<section
+		data-background='https://farm1.staticflickr.com/37/78341958_73af52f87f_b_d.jpg'
+		alt='open notebook'>
+		</section>
+
 		<section>
-		  <pre><code>#Ránking de investigadores en la UGR
-```{r setup, echo=FALSE}
-library(XML)
+		  <pre><code>---
+title: "Elecciones en la UGR"
+author: "JJ Merelo"
+date: "2/07/2015"
+output: html_document
+---
+#Elecciones en la UGR: reparto por centros
+```{r setup, echo=FALSE, warnings=FALSE,message=FALSE}
+library(RCurl)
 library(ggplot2)
-theurl <- "http://investigacion.ugr.es/ugrinvestiga/static/BuscadorRanking/*/buscar?tipo=&rama_c=&disciplina_c=TELE_D&especialidad_c=&indicador=&periodo="
-tables <- readHTMLTable(theurl)
-my.table <- data.frame(Rank=c(1:length(tables$`NULL`$Citas)),Citas=as.numeric(as.character(tables$`NULL`$Citas)))
+elecciones.text <- getURL("https://raw.githubusercontent.com/elecciones-ugr/actas/master/actas.csv")
+elecciones.data <- read.csv(text = elecciones.text)
+elecciones.data$porcentaje = elecciones.data$"Pilar.Aranda"/elecciones.data$"Válidas"
+elecciones.data$urna = paste(elecciones.data$Sector, elecciones.data$Centro )
 ```
-
-El [ránking de investigadores](http://investigacion.ugr.es/ugrinvestiga/static/BuscadorRanking/*/buscar?tipo=&rama_c=&disciplina_c=TELE_D&especialidad_c=&indicador=&periodo=) se elabora periódicamente por parte de [UGR investiga](http://investigacion.ugr.es/ugrinvestiga/) y está dividido por disciplinas.
-
-El próximo gráfico refleja el número de citas por investigador, ordenado de mayor a menor y con escala y logarítmica.
+El siguiente es el porcentaje de voto, ordenado por urna (es decir, centro y colectivo)
 ```{r, echo=FALSE}
-ggplot(data=my.table,aes(x=Rank,y=Citas))+geom_point()+scale_y_log10()
-```
-		  </code></pre>
+ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_bar(stat='identity')
+```</code></pre>
 		</section>
 
 		<section><h1><a
@@ -256,6 +265,9 @@ ggplot(data=my.table,aes(x=Rank,y=Citas))+geom_point()+scale_y_log10()
 				      href='https://www.flickr.com/photos/wallyg/6271344320/'>Puertas
 				      abiertas</a> de Wally
 				      Gobetz</li>
+
+				    <li class='credits'>Libreta de <a
+				      href='https://www.flickr.com/photos/csb13/78341958/'>Chris Blakeley</a></li>
 
 				    <li class='credits'><a
 				    href='https://www.flickr.com/photos/cayusa/3190757194/in/photolist-5RXsX5-azWHNq-9yFdM9-9RGESz-9S5aGU-9Sg7Ep-9xssPv-9E99hf-7puEwU-9wyzqH-9ggVyz-9Fc6oF-9ihTmF-5Hkdpw-9tXaXG-9jg4pZ-9y2Lnf-9kBd77-9GG1PX-8LPYp8-8JjYZ6-9jcokU-9vEs9T-9Jehdh-9FLb9D-9Gq43x-71SEoD-9ybH5H-8c3giZ-9sxDzV-9Q4fha-9wQFaE-9uZYxB-9DTaFx-9bRbBx-9o4nq7-7jHTk2-9PySP5-bDVVbC-7Qc2f3-9NjesU-9qwDp9-9CMMnm-9jDnj4-9sTRKL-9no9Ez-9RtAbE-9R771G-aVznH2-9P5i28'>Check
