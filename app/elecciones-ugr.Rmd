@@ -7,7 +7,7 @@ output: html_document
 
 #Elecciones en la UGR: reparto por centros
 
-```{r setup, echo=FALSE, warnings=FALSE}
+```{r setup, echo=FALSE, warnings=FALSE,message=FALSE}
 library(RCurl)
 library(ggplot2)
 elecciones.text <- getURL("https://raw.githubusercontent.com/elecciones-ugr/actas/master/actas.csv")
