@@ -54,6 +54,13 @@ src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
 		<section data-background='https://farm7.staticflickr.com/6084/6113835224_4359efe712_b_d.jpg' alt='pollitos saliendo del cascarón'>
 		  <aside class='notes'>¿Por qué la ciencia reproducible? Primero, por ti. Reproducir un trabajo significa que vas a poder retomarlo cuando quieras. Pero, desde un punto de vista ético, es que si no es reproducible ni siquiera es ciencia.</aside>
 		</section>
+
+		<section><h1>Yo reproduzco</h1></section>
+
+		<section><h1>Tú reproduces</h1>
+		  <aside class='notes'>Según <a href='http://uwescience.github.io/reproducible/guidelines.html'>esta guía</a> lo esencial de la ciencia reproducible es tener control de versiones, cálculos replicables, compartir datos y código y tener un entorno replicable</aside>
+
+		</section>
 	      </section>
 
 	      <section> <!-- Software libre y licencias -->
@@ -61,7 +68,7 @@ src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
 		  data-background='https://farm5.staticflickr.com/4060/4347002765_ec2e972900_b_d.jpg'
 alt='Un pingüino'>
 		  
-		  <aside class='notes'>Primero, el
+		  <aside class='notes'>Pero para todo ello es esencial usar y crear software libre, por eso empezamos primero, el
 		    software libre. Desarrollo de software
 		    libre y acceso abierto, <em>open
 		    notebook science</em>. Es
@@ -216,16 +223,29 @@ ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_
 		    de un trabajo impreso o su equivalente, un PDF.</aside>
 		</section>
 
-		<section data-background='https://farm1.staticflickr.com/173/431588468_8f8c529199_o_d.jpg'
-		alt='Jupiter con i latina'>
-
-		  <aside class='notes'>RMarkdown no es el único
-		    entorno de programación <em>literaria</em>, aunque
-		    sí el que tiene un umbral de entrada
-		    inferior.</aside>
-
-		</section>
 	      </section> <!-- / Software libre y licencias -->
+
+	      <section> <!-- Jupyter -->
+			<section data-background='https://farm1.staticflickr.com/173/431588468_8f8c529199_o_d.jpg'
+				 alt='Jupiter con i latina'>
+			  
+			  <aside class='notes'>RMarkdown no es el único
+			    entorno de programación <em>literaria</em>, aunque
+			    sí el que tiene un umbral de entrada
+			    inferior.</aside>
+			  
+			</section>
+
+			<section data-background='img/ipynb.png'>
+			  <aside class='notes'>Los notebooks de iPython, o Jupyter, o como se llame, es un entorno de desarrollo interactivo cuyas sesiones se pueden guardar y reproducir.
+			  </aside>
+			</section>
+
+			<section>
+			  <h1>Código Python + Markdown</h1>
+			  <h2 class='fragment'><a href='http://nbviewer.ipython.org/github/JJ/ciencia-reproducible/blob/gh-pages/app/Investigadores-UGR.ipynb'>Visualizadores</a> online</h2>
+			</section>
+	      </section><!-- /Jupyter -->
 
 	      <section>
 		<section><h1>¿Y dónde ejecutas tu programa?</h1></section>
@@ -236,8 +256,8 @@ ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_
 		    usar infraestructuras como servicio
 		    (básicamente ordenadores virtuales,
 		    escalables y bajo demanda) o plataformas
-		    como servicio que pueden alujar
-		    servicios y en donde se pueden desplegar
+		    como servicio que pueden alojar
+		    aplicaciones y en donde se pueden desplegar
 		    con la especificación y el software
 		    instalado que uno quiera. El despliegue,
 		    normalmente, se hace con git, por eso es
