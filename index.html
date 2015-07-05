@@ -244,8 +244,46 @@ ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_
 			<section>
 			  <h1>Código Python + Markdown</h1>
 			  <h2 class='fragment'><a href='http://nbviewer.ipython.org/github/JJ/ciencia-reproducible/blob/gh-pages/app/Investigadores-UGR.ipynb'>Visualizadores</a> online</h2>
+
+			  <aside class='notes'>Ipython es una aplicación cliente-servidor que se ejecuta desde el navegador lanzándola desde la línea de órdenes con `ipython notebook`. Un <a href='http://opentechschool.github.io/python-data-intro/core/notebook.html'>breve tutorial</a> explica cómo trabajar con ella.</aside>
 			</section>
 	      </section><!-- /Jupyter -->
+
+	      <section> <!-- flujos -->
+	      <section><h1>Enflujando</h1>
+
+		<h2>Con Vistrails, Taverna o Sumatra</h2>
+		<aside class='notes'><a
+		href='http://www.vistrails.org/usersguide/v2.2/html/creating.html'>Vistrails</a>
+		es una herramienta para flujos de trabajo  que permite
+		crear flujos reproducibles en cualquier ordenador. No
+		es que sea tremendamente popular, pero <a
+		href='http://arxiv.org/abs/1309.1784'>puede servir
+		para crear flujos de análisis de datos y su
+		visualización</a> que podrían ser reproducidos de
+		  forma independiente de la máquina. <a
+		href='https://pythonhosted.org/Sumatra/managing_a_project.html'>Sumatra</a>
+		es una herramienta de línea de órdenes que permite
+		trabajar fácilmente con proyectos de investigación y
+		  sus resultados. Finalmente <a
+		href='https://en.wikipedia.org/wiki/Apache_Taverna'>Taverna</a>
+		es un proyecto de Apache para ejecutar flujos de
+		trabajo que conecten con diferentes APIs y
+		  aplicaciones y las integren.</aside>
+	      </section>
+
+	      <section data-background='img/taverna.png' alt='Flujos
+	      de Taverna en MyExperiment'>
+		<aside class='notes'>Los flujos se pueden publicar en
+	      MyExperiment y si tienes descargado el Taverna
+	      Workbench, ejecutarlos usando la ejecución remota de lo
+		  que sea necesario. Yo no lo he usado, pero en
+	      ciencias donde se use mucha información de bases de
+	      datos remotas y se haga cosas con ellas como Astronomía
+		  y Biología se usa bastante.</aside>
+	      </section>
+	      
+	      </section> <!-- /flujos -->
 
 	      <section>
 		<section><h1>¿Y dónde ejecutas tu programa?</h1></section>
