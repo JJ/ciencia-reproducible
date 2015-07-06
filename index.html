@@ -247,7 +247,32 @@ ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_
 
 			  <aside class='notes'>Ipython es una aplicación cliente-servidor que se ejecuta desde el navegador lanzándola desde la línea de órdenes con `ipython notebook`. Un <a href='http://opentechschool.github.io/python-data-intro/core/notebook.html'>breve tutorial</a> explica cómo trabajar con ella.</aside>
 			</section>
+
 	      </section><!-- /Jupyter -->
+
+	      <section><h1><code>knitr</code>
+		<pre><code>\documentclass{article}
+\title{Resultado de las elecciones en la UGR}
+\begin{document}
+\maketitle
+<<setup,echo=FALSE,warning=FALSE>>=
+elecciones.data$urna = paste(elecciones.data$Sector, elecciones.data$Centro ) % Más cosas
+@
+\section{Introducci\'on}
+Los porcentajes de voto por candidato son bastante diferentes dependiendo del sector del que se trate, como se muestra en la Figura \ref{bp}.
+\begin{figure}[h!]
+<<grafico,echo=FALSE>>=
+ggplot(elecciones.data,aes(factor(Sector),porcentaje))+geom_boxplot()+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+@
+\caption{Porcentajes por sector de la comunidad universitaria.\label{bp}}
+\end{figure}
+\end{document}</code></pre>
+		  <aside class='notes'>Knitr funciona desde emacs o
+		desde Rstudio y se integra con LaTeX, pudiendo usarse
+		para crear verdaderos trabajos con calidad de
+		revista. Se puede reaprovechar en parte lo que se haya
+		    hecho con Rmarkdown, al menos las fórmulas</aside>
+</grafico>
 
 	      <section> <!-- flujos -->
 	      <section><h1>Enflujando</h1>
