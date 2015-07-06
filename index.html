@@ -51,8 +51,15 @@ src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
 	      		  
 	      <section> <!-- Ciencia reproducible -->
 
-		<section data-background='https://farm7.staticflickr.com/6084/6113835224_4359efe712_b_d.jpg' alt='pollitos saliendo del cascarón'>
-		  <aside class='notes'>¿Por qué la ciencia reproducible? Primero, por ti. Reproducir un trabajo significa que vas a poder retomarlo cuando quieras. Pero, desde un punto de vista ético, es que si no es reproducible ni siquiera es ciencia.</aside>
+		<section data-background='https://farm7.staticflickr.com/6084/6113835224_4359efe712_b_d.jpg' title='pollitos saliendo del cascarón, alguien reproduciéndose'>
+
+		  <aside class='notes'>¿Por qué la ciencia
+		    reproducible? Primero, por ti. Reproducir un trabajo
+		    significa que vas a poder retomarlo cuando
+		    quieras. Pero, desde un punto de vista ético, es que
+		    si no es reproducible ni siquiera es
+		    ciencia.</aside> 
+
 		</section>
 
 		<section><h1>Yo reproduzco</h1></section>
@@ -61,7 +68,8 @@ src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
 		  <aside class='notes'>Según <a href='http://uwescience.github.io/reproducible/guidelines.html'>esta guía</a> lo esencial de la ciencia reproducible es tener control de versiones, cálculos replicables, compartir datos y código y tener un entorno replicable</aside>
 
 		</section>
-	      </section>
+
+	      </section> <!-- /ciencia reproducible -->
 
 	      <section> <!-- Software libre y licencias -->
 		<section
@@ -250,7 +258,8 @@ ggplot(data=elecciones.data,aes(x=reorder(urna,-porcentaje),y=porcentaje))+geom_
 
 	      </section><!-- /Jupyter -->
 
-	      <section><h1><code>knitr</code>
+	      <section>
+		<h1><code>knitr</code></h1>
 		<pre><code>\documentclass{article}
 \title{Resultado de las elecciones en la UGR}
 \begin{document}
@@ -267,15 +276,17 @@ ggplot(elecciones.data,aes(factor(Sector),porcentaje))+geom_boxplot()+theme(axis
 \caption{Porcentajes por sector de la comunidad universitaria.\label{bp}}
 \end{figure}
 \end{document}</code></pre>
+
 		  <aside class='notes'>Knitr funciona desde emacs o
 		desde Rstudio y se integra con LaTeX, pudiendo usarse
 		para crear verdaderos trabajos con calidad de
 		revista. Se puede reaprovechar en parte lo que se haya
 		    hecho con Rmarkdown, al menos las fórmulas</aside>
-</grafico>
 
-	      <section> <!-- flujos -->
-	      <section><h1>Enflujando</h1>
+	      </section> <!-- flujos -->
+
+	      <section>
+		<h1>Enflujando</h1>
 
 		<h2>Con Vistrails, Taverna o Sumatra</h2>
 		<aside class='notes'><a
