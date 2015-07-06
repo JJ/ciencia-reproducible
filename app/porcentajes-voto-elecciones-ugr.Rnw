@@ -1,0 +1,30 @@
+\documentclass{article}
+
+\title{Resultado de las elecciones en la UGR}
+\author{Juan J. Merelo}
+\begin{document}
+\maketitle
+
+<<setup,echo=FALSE,warning=FALSE>>=
+library(RCurl)
+library(ggplot2)
+elecciones.text <- getURL("https://raw.githubusercontent.com/elecciones-ugr/actas/master/actas.csv")
+elecciones.data <- read.csv(text = elecciones.text)
+elecciones.data$porcentaje = elecciones.data$"Pilar.Aranda"/elecciones.data$"Válidas"
+elecciones.data$urna = paste(elecciones.data$Sector, elecciones.data$Centro )
+@
+
+\section{Introducci\'on}
+
+Los porcentajes de voto por candidato son bastante diferentes dependiendo del sector del que se trate, como se muestra en la Figura \ref{bp}.
+
+\begin{figure}[h!]
+  \centering
+<<grafico,echo=FALSE>>=
+ggplot(elecciones.data,aes(factor(Sector),porcentaje))+geom_boxplot()+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+@
+\caption{Porcentajes por sector de la comunidad universitaria.\label{bp}}
+\end{figure}
+
+
+\end{document}
